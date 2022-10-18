@@ -1,0 +1,16 @@
+Utilisation de django, django rest, avec la librairie simplejwt
+jwt valide 1 jour, jwt refresh valide 5 jours.
+Un utilisateur a accès a ses posts,
+l'admin a accès à tous les posts,
+on accède à la création de token via l'uri /api/token/
+on accède à l'accès aux posts via l'uri /api/token/{id}
+
+
+{% for user in users %}
+<p> je suis {{ user.username }} et j'ai l'ID {{ user.id }} </p>
+{% endfor %}
+
+{% for post in posts %}
+<p> je suis  {{ post.title }} et j'ai l'ID {{ post.id }} </p>
+<p> je suis écrit par {{ post.author.username }} et j'ai l'ID {{ post.author.id }} </p>
+{% endfor %}
